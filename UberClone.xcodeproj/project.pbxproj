@@ -14,6 +14,7 @@
 		8BA1310127DCFB060073E8A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA130FF27DCFB060073E8A2 /* LaunchScreen.storyboard */; };
 		8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */; };
 		8BA1311127DD21300073E8A2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1311027DD21300073E8A2 /* UIView+.swift */; };
+		8BA1311327DD3CA80073E8A2 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1311227DD3CA80073E8A2 /* UITextField+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8BA1310227DCFB060073E8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8BA1311027DD21300073E8A2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		8BA1311227DD3CA80073E8A2 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				8BA1311027DD21300073E8A2 /* UIView+.swift */,
+				8BA1311227DD3CA80073E8A2 /* UITextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA1311127DD21300073E8A2 /* UIView+.swift in Sources */,
+				8BA1311327DD3CA80073E8A2 /* UITextField+.swift in Sources */,
 				8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */,
 				8BA130F527DCFB050073E8A2 /* AppDelegate.swift in Sources */,
 				8BA130F727DCFB050073E8A2 /* SceneDelegate.swift in Sources */,
