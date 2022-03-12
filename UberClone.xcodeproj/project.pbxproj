@@ -13,6 +13,7 @@
 		8BA130FE27DCFB060073E8A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BA130FD27DCFB060073E8A2 /* Assets.xcassets */; };
 		8BA1310127DCFB060073E8A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA130FF27DCFB060073E8A2 /* LaunchScreen.storyboard */; };
 		8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */; };
+		8BA1311127DD21300073E8A2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1311027DD21300073E8A2 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8BA1310027DCFB060073E8A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BA1310227DCFB060073E8A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8BA1311027DD21300073E8A2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		8BA1310827DCFB390073E8A2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8BA1310F27DD211A0073E8A2 /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -105,6 +108,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8BA1310F27DD211A0073E8A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8BA1311027DD21300073E8A2 /* UIView+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA1311127DD21300073E8A2 /* UIView+.swift in Sources */,
 				8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */,
 				8BA130F527DCFB050073E8A2 /* AppDelegate.swift in Sources */,
 				8BA130F727DCFB050073E8A2 /* SceneDelegate.swift in Sources */,
