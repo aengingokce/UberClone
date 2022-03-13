@@ -20,42 +20,46 @@ class LoginViewController: UIViewController {
     }()
     
     private lazy var emailContainerView: UIView = {
-        let view = UIView().containerView(imageName: "ic_mail_outline_white_2x", textField: emailTextField)
+        let view = UIView().containerView(imageName: "ic_mail_outline_white_2x",
+                                          textField: emailTextField)
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return view
     }()
     
     private lazy var passwordContainerView: UIView = {
-        let view = UIView().containerView(imageName: "ic_lock_outline_white_2x", textField: passwordTextField)
+        let view = UIView().containerView(imageName: "ic_lock_outline_white_2x",
+                                          textField: passwordTextField)
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return view
     }()
     
     private let emailTextField: UITextField = {
-        return UITextField().textField(placeholder: "Email", isSecureTextEntry: false)
+        return UITextField().textField(placeholder: "Email",
+                                       isSecureTextEntry: false)
     }()
     
     private let passwordTextField: UITextField = {
-        return UITextField().textField(placeholder: "Password", isSecureTextEntry: true)
+        return UITextField().textField(placeholder: "Password",
+                                       isSecureTextEntry: true)
     }()
     
-    private let loginButton: UIButton = {
-        let button = UIButton(type: .system)
+    private let loginButton: AuthButton = {
+        let button = AuthButton(type: .system)
         button.setTitle("Log In", for: .normal)
-        button.setTitleColor(UIColor(white: 1, alpha: 0.5), for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
-        button.backgroundColor = .mainBlueTint
-        button.layer.cornerRadius = 5
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         return button
     }()
     
     let dontHaveAccountButton: UIButton = {
         let button = UIButton(type: .system)
-        let attributedTitle = NSMutableAttributedString(string: "Don't have an account?  ", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16),
-                                                                                                         NSAttributedString.Key.foregroundColor : UIColor.lightGray])
-        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16),
-                                                                                  NSAttributedString.Key.foregroundColor : UIColor.mainBlueTint]))
+        let attributedTitle = NSMutableAttributedString(
+            string: "Don't have an account?  ",
+            attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16),
+                        NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        attributedTitle.append(NSAttributedString(
+            string: "Sign Up",
+            attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16),
+                        NSAttributedString.Key.foregroundColor : UIColor.mainBlueTint]))
         button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
         button.setAttributedTitle(attributedTitle, for: .normal)
         return button
@@ -89,7 +93,9 @@ class LoginViewController: UIViewController {
         titleLabel.centerX(inView: view)
         
         // Email and Password Stack View - Constraints
-        let stackViewForEmailAndPassword = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton])
+        let stackViewForEmailAndPassword = UIStackView(arrangedSubviews: [emailContainerView,
+                                                                          passwordContainerView,
+                                                                          loginButton])
         stackViewForEmailAndPassword.axis = .vertical
         stackViewForEmailAndPassword.distribution = .fillEqually
         stackViewForEmailAndPassword.spacing = 16
