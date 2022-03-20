@@ -18,6 +18,12 @@
 		8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */; };
 		8BA1311127DD21300073E8A2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1311027DD21300073E8A2 /* UIView+.swift */; };
 		8BA1311327DD3CA80073E8A2 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1311227DD3CA80073E8A2 /* UITextField+.swift */; };
+		8BCE83B927E7D32D001FC502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE83B827E7D32D001FC502 /* GoogleService-Info.plist */; };
+		8BCE83BC27E7D509001FC502 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83BB27E7D509001FC502 /* FirebaseAuth */; };
+		8BCE83BE27E7D509001FC502 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83BD27E7D509001FC502 /* FirebaseDatabase */; };
+		8BCE83C027E7D509001FC502 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83BF27E7D509001FC502 /* FirebaseStorage */; };
+		8BCE83C327E7D5A3001FC502 /* GeoFire in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83C227E7D5A3001FC502 /* GeoFire */; };
+		8BCE83C527E7D5A3001FC502 /* GeoFireUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83C427E7D5A3001FC502 /* GeoFireUtils */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,7 @@
 		8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8BA1311027DD21300073E8A2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		8BA1311227DD3CA80073E8A2 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		8BCE83B827E7D32D001FC502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +48,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BCE83C327E7D5A3001FC502 /* GeoFire in Frameworks */,
+				8BCE83BE27E7D509001FC502 /* FirebaseDatabase in Frameworks */,
+				8BCE83BC27E7D509001FC502 /* FirebaseAuth in Frameworks */,
+				8BCE83C027E7D509001FC502 /* FirebaseStorage in Frameworks */,
+				8BCE83C527E7D5A3001FC502 /* GeoFireUtils in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +98,7 @@
 				8BA130FD27DCFB060073E8A2 /* Assets.xcassets */,
 				8BA130FF27DCFB060073E8A2 /* LaunchScreen.storyboard */,
 				8BA1310227DCFB060073E8A2 /* Info.plist */,
+				8BCE83B827E7D32D001FC502 /* GoogleService-Info.plist */,
 			);
 			path = UberClone;
 			sourceTree = "<group>";
@@ -154,6 +167,13 @@
 			dependencies = (
 			);
 			name = UberClone;
+			packageProductDependencies = (
+				8BCE83BB27E7D509001FC502 /* FirebaseAuth */,
+				8BCE83BD27E7D509001FC502 /* FirebaseDatabase */,
+				8BCE83BF27E7D509001FC502 /* FirebaseStorage */,
+				8BCE83C227E7D5A3001FC502 /* GeoFire */,
+				8BCE83C427E7D5A3001FC502 /* GeoFireUtils */,
+			);
 			productName = UberClone;
 			productReference = 8BA130F127DCFB050073E8A2 /* UberClone.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +202,10 @@
 				Base,
 			);
 			mainGroup = 8BA130E827DCFB050073E8A2;
+			packageReferences = (
+				8BCE83BA27E7D508001FC502 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8BCE83C127E7D5A3001FC502 /* XCRemoteSwiftPackageReference "geofire-objc" */,
+			);
 			productRefGroup = 8BA130F227DCFB050073E8A2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -197,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BA1310127DCFB060073E8A2 /* LaunchScreen.storyboard in Resources */,
+				8BCE83B927E7D32D001FC502 /* GoogleService-Info.plist in Resources */,
 				8BA130FE27DCFB060073E8A2 /* Assets.xcassets in Resources */,
 				8BA130FC27DCFB050073E8A2 /* Main.storyboard in Resources */,
 			);
@@ -436,6 +461,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8BCE83BA27E7D508001FC502 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		8BCE83C127E7D5A3001FC502 /* XCRemoteSwiftPackageReference "geofire-objc" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/geofire-objc";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BCE83BB27E7D509001FC502 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BCE83BA27E7D508001FC502 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8BCE83BD27E7D509001FC502 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BCE83BA27E7D508001FC502 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		8BCE83BF27E7D509001FC502 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BCE83BA27E7D508001FC502 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		8BCE83C227E7D5A3001FC502 /* GeoFire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BCE83C127E7D5A3001FC502 /* XCRemoteSwiftPackageReference "geofire-objc" */;
+			productName = GeoFire;
+		};
+		8BCE83C427E7D5A3001FC502 /* GeoFireUtils */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BCE83C127E7D5A3001FC502 /* XCRemoteSwiftPackageReference "geofire-objc" */;
+			productName = GeoFireUtils;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8BA130E927DCFB050073E8A2 /* Project object */;
 }
