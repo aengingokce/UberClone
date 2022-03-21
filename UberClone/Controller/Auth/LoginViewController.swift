@@ -92,7 +92,7 @@ class LoginViewController: UIViewController {
                 print(err.localizedDescription)
                 return
             }
-            
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

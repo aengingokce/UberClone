@@ -24,6 +24,7 @@
 		8BCE83C327E7D5A3001FC502 /* GeoFire in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83C227E7D5A3001FC502 /* GeoFire */; };
 		8BCE83C527E7D5A3001FC502 /* GeoFireUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83C427E7D5A3001FC502 /* GeoFireUtils */; };
 		8BCE83C727E7E019001FC502 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8BCE83C627E7E018001FC502 /* GoogleService-Info.plist */; };
+		8BD81BF327E91E2C00FB9793 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD81BF227E91E2C00FB9793 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		8BA1311027DD21300073E8A2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		8BA1311227DD3CA80073E8A2 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		8BCE83C627E7E018001FC502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8BD81BF227E91E2C00FB9793 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				8B31074127DE7F8100756261 /* Auth */,
+				8BD81BF227E91E2C00FB9793 /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				8B31073E27DE371300756261 /* SignUpViewController.swift in Sources */,
 				8BA1311327DD3CA80073E8A2 /* UITextField+.swift in Sources */,
 				8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */,
+				8BD81BF327E91E2C00FB9793 /* HomeViewController.swift in Sources */,
 				8BA130F527DCFB050073E8A2 /* AppDelegate.swift in Sources */,
 				8BA130F727DCFB050073E8A2 /* SceneDelegate.swift in Sources */,
 				8B31073C27DE29AB00756261 /* UIColor+.swift in Sources */,

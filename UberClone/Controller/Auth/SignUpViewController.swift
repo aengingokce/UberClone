@@ -125,7 +125,7 @@ class SignUpViewController: UIViewController {
                           "accountType" : accountTypeIndex] as [String : Any]
             
             Database.database().reference().child("users").child(uid).updateChildValues(values) { err, ref in
-                
+                self.dismiss(animated: true, completion: nil)
             }
         }
     }
