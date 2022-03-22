@@ -12,6 +12,8 @@ class SignUpViewController: UIViewController {
     
     // MARK: - Properties
     
+    private let homeViewController = HomeViewController()
+    
     private let titleLabel: UILabel = {
        let label = UILabel()
         label.text = "UBER"
@@ -125,6 +127,8 @@ class SignUpViewController: UIViewController {
                           "accountType" : accountTypeIndex] as [String : Any]
             
             Database.database().reference().child("users").child(uid).updateChildValues(values) { err, ref in
+                guard let vc = UIApplication.shared.keyWindow?.rootViewController as? HomeViewController else { return }
+                vc.configureUI()
                 self.dismiss(animated: true, completion: nil)
             }
         }

@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
     
     // MARK: - Properties
     
+    
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "UBER"
@@ -92,6 +94,8 @@ class LoginViewController: UIViewController {
                 print(err.localizedDescription)
                 return
             }
+            guard let vc = UIApplication.shared.keyWindow?.rootViewController as? HomeViewController else { return }
+            vc.configureUI()
             self.dismiss(animated: true, completion: nil)
         }
     }
