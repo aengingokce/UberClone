@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
         return locationManager
     }()
     
+    private let locationInputActivationView = LocationInputActivationView()
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -55,6 +57,11 @@ class HomeViewController: UIViewController {
     
     func configureUI() {
         configureMapView()
+        
+        view.addSubview(locationInputActivationView)
+        locationInputActivationView.centerX(inView: view)
+        locationInputActivationView.setDimension(height: 50, width: view.frame.width - 64)
+        locationInputActivationView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
     }
     
     func configureMapView() {
