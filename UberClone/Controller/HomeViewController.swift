@@ -66,7 +66,7 @@ class HomeViewController: UIViewController {
         locationInputActivationView.setDimension(height: 50, width: view.frame.width - 64)
         locationInputActivationView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         locationInputActivationView.alpha = 0
-        UIView.animate(withDuration: 1 ) {
+        UIView.animate(withDuration: 0.5) {
             self.locationInputActivationView.alpha = 1
         }
     }

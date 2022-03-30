@@ -19,16 +19,16 @@ class LocationInputActivationView: UIView {
     
     private let indicatorView: UIView = {
        let view = UIView()
-        view.backgroundColor = .black
-        return view
+       view.backgroundColor = .black
+       return view
     }()
     
     private let placeholderLabel: UILabel = {
        let label = UILabel()
-        label.text = "Where to?"
-        label.font = UIFont.systemFont(ofSize: 18)
-        label.textColor = .darkGray
-        return label
+       label.text = "Where to?"
+       label.font = UIFont.systemFont(ofSize: 18)
+       label.textColor = .darkGray
+       return label
     }()
     
     // MARK: - Lifecycle
