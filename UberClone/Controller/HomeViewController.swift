@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     }()
     
     private let locationInputActivationView = LocationInputActivationView()
+    private let locationInputView = LocationInputView()
     
     // MARK: - Lifecycle
     
@@ -65,7 +66,7 @@ class HomeViewController: UIViewController {
         locationInputActivationView.setDimension(height: 50, width: view.frame.width - 64)
         locationInputActivationView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         locationInputActivationView.alpha = 0
-        UIView.animate(withDuration: 1) {
+        UIView.animate(withDuration: 1 ) {
             self.locationInputActivationView.alpha = 1
         }
     }
@@ -76,6 +77,19 @@ class HomeViewController: UIViewController {
         
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
+    }
+    
+    func configureLocationInputView() {
+        locationInputView.delegate = self
+        view.addSubview(locationInputView)
+        locationInputView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 200)
+        locationInputView.alpha = 0
+        UIView.animate(withDuration: 0.5) {
+            self.locationInputView.alpha = 1
+        } completion: { _ in
+            print("TableView")
+        }
+
     }
 }
 
@@ -106,8 +120,24 @@ extension HomeViewController: CLLocationManagerDelegate {
     }
 }
 
+    // MARK: - Extensions
+
 extension HomeViewController: LocationInputActivationViewDelegate {
     func presentLocationInputActivationView() {
-        print("123")
+        configureLocationInputView()
+        locationInputActivationView.alpha = 0
+        
+    }
+}
+
+extension HomeViewController: LocationInputViewDelegate {
+    func dismissLocationInputView() {
+        UIView.animate(withDuration: 0.5) {
+            self.locationInputView.alpha = 0
+        } completion: { _ in
+            UIView.animate(withDuration: 0.5) {
+                self.locationInputActivationView.alpha = 1
+            }
+        }
     }
 }

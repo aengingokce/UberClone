@@ -13,7 +13,7 @@ protocol LocationInputActivationViewDelegate: AnyObject {
 
 class LocationInputActivationView: UIView {
     
-    //MARK: - Properties
+    // MARK: - Properties
     
     weak var delegate: LocationInputActivationViewDelegate?
     
@@ -31,16 +31,13 @@ class LocationInputActivationView: UIView {
         return label
     }()
     
-    //MARK: - Lifecycle
+    // MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         backgroundColor = .white
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.55
-        layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        layer.masksToBounds = false
+        addShadow()
         
         addSubview(indicatorView)
         indicatorView.centerY(inView: self, leftAnchor: leftAnchor, paddinfLeft: 16)
@@ -57,7 +54,7 @@ class LocationInputActivationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Selectors
+    // MARK: - Selectors
     
     @objc func presentLocationInputView() {
         delegate?.presentLocationInputActivationView()

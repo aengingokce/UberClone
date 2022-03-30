@@ -11,6 +11,7 @@
 		8B31073E27DE371300756261 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B31073D27DE371300756261 /* SignUpViewController.swift */; };
 		8B31074027DE789800756261 /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B31073F27DE789800756261 /* AuthButton.swift */; };
 		8B6D490527EF5A5A004BFA3F /* LocationInputActivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6D490427EF5A5A004BFA3F /* LocationInputActivationView.swift */; };
+		8B933E0527F4EB5400FE04B8 /* LocationInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B933E0427F4EB5400FE04B8 /* LocationInputView.swift */; };
 		8BA130F527DCFB050073E8A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA130F427DCFB050073E8A2 /* AppDelegate.swift */; };
 		8BA130F727DCFB050073E8A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA130F627DCFB050073E8A2 /* SceneDelegate.swift */; };
 		8BA130FC27DCFB050073E8A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BA130FA27DCFB050073E8A2 /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		8B31073D27DE371300756261 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8B31073F27DE789800756261 /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 		8B6D490427EF5A5A004BFA3F /* LocationInputActivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputActivationView.swift; sourceTree = "<group>"; };
+		8B933E0427F4EB5400FE04B8 /* LocationInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInputView.swift; sourceTree = "<group>"; };
 		8BA130F127DCFB050073E8A2 /* UberClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA130F427DCFB050073E8A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BA130F627DCFB050073E8A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				8B31073F27DE789800756261 /* AuthButton.swift */,
 				8B6D490427EF5A5A004BFA3F /* LocationInputActivationView.swift */,
+				8B933E0427F4EB5400FE04B8 /* LocationInputView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				8BA130F527DCFB050073E8A2 /* AppDelegate.swift in Sources */,
 				8BA130F727DCFB050073E8A2 /* SceneDelegate.swift in Sources */,
 				8B31073C27DE29AB00756261 /* UIColor+.swift in Sources */,
+				8B933E0527F4EB5400FE04B8 /* LocationInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
