@@ -20,6 +20,12 @@ class HomeViewController: UIViewController {
         return locationManager
     }()
     
+    private let locationInputActivationView = LocationInputActivationView()
+    private let locationInputView = LocationInputView()
+    private let tableView = UITableView()
+    
+    private final let locationInputViewHeight: CGFloat = 200
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -55,6 +61,19 @@ class HomeViewController: UIViewController {
     
     func configureUI() {
         configureMapView()
+        
+        locationInputActivationView.delegate = self
+        
+        view.addSubview(locationInputActivationView)
+        locationInputActivationView.centerX(inView: view)
+        locationInputActivationView.setDimension(height: 50, width: view.frame.width - 64)
+        locationInputActivationView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
+        locationInputActivationView.alpha = 0
+        UIView.animate(withDuration: 0.5) {
+            self.locationInputActivationView.alpha = 1
+        }
+        
+        configureTableView()
     }
     
     func configureMapView() {
@@ -63,6 +82,35 @@ class HomeViewController: UIViewController {
         
         mapView.showsUserLocation = true
         mapView.userTrackingMode = .follow
+    }
+    
+    func configureLocationInputView() {
+        locationInputView.delegate = self
+        view.addSubview(locationInputView)
+        locationInputView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: locationInputViewHeight)
+        locationInputView.alpha = 0
+        UIView.animate(withDuration: 0.5) {
+            self.locationInputView.alpha = 1
+        } completion: { _ in
+            UIView.animate(withDuration: 0.5) {
+                self.tableView.frame.origin.y = self.locationInputViewHeight
+            }
+        }
+    }
+    
+    func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(LocationCell.self, forCellReuseIdentifier: "LocationCell")
+        tableView.rowHeight = 60
+        tableView.tableFooterView = UIView()
+        let height = view.frame.height - locationInputViewHeight
+        tableView.frame = CGRect(x: 0, y: view.frame.height,
+                                 width: view.frame.width, height: height)
+        
+        
+        view.addSubview(tableView )
     }
 }
 
@@ -91,4 +139,49 @@ extension HomeViewController: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         checkLocationPermission()
     }
+}
+
+    // MARK: - Extensions
+
+extension HomeViewController: LocationInputActivationViewDelegate {
+    func presentLocationInputActivationView() {
+        configureLocationInputView()
+        locationInputActivationView.alpha = 0
+        
+    }
+}
+
+extension HomeViewController: LocationInputViewDelegate {
+    func dismissLocationInputView() {
+        self.locationInputView.removeFromSuperview()
+        UIView.animate(withDuration: 0.5) {
+            self.locationInputView.alpha = 0
+        } completion: { _ in
+            UIView.animate(withDuration: 0.5) {
+                self.locationInputActivationView.alpha = 1
+                self.tableView.frame.origin.y = self.view.frame.height
+            }
+        }
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return section == 0 ? "History" : "Results"
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return section == 0 ? 2 : 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
+        return cell
+    }
+    
+    
 }
