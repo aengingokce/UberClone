@@ -50,7 +50,7 @@ class LocationInputView: UIView {
         return view
     }()
     
-    private let originLocationTextField: UITextField = {
+    private lazy var originLocationTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Current Location"
         textField.backgroundColor = .systemGroupedBackground
@@ -65,7 +65,7 @@ class LocationInputView: UIView {
         return textField
     }()
     
-    private let destinationLocationTextField: UITextField = {
+    private lazy var destinationLocationTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Enter a destination"
         textField.backgroundColor = .lightGray
