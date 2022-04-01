@@ -22,6 +22,9 @@ class HomeViewController: UIViewController {
     
     private let locationInputActivationView = LocationInputActivationView()
     private let locationInputView = LocationInputView()
+    private let tableView = UITableView()
+    
+    private final let locationInputViewHeight: CGFloat = 200
     
     // MARK: - Lifecycle
     
@@ -69,6 +72,8 @@ class HomeViewController: UIViewController {
         UIView.animate(withDuration: 0.5) {
             self.locationInputActivationView.alpha = 1
         }
+        
+        configureTableView()
     }
     
     func configureMapView() {
@@ -82,14 +87,27 @@ class HomeViewController: UIViewController {
     func configureLocationInputView() {
         locationInputView.delegate = self
         view.addSubview(locationInputView)
-        locationInputView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: 200)
+        locationInputView.anchor(top: view.topAnchor, left: view.leftAnchor, right: view.rightAnchor, height: locationInputViewHeight)
         locationInputView.alpha = 0
         UIView.animate(withDuration: 0.5) {
             self.locationInputView.alpha = 1
         } completion: { _ in
             print("TableView")
         }
-
+    }
+    
+    func configureTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(LocationCell.self, forCellReuseIdentifier: "LocationCell")
+        tableView.rowHeight = 60
+        let height = view.frame.height - locationInputViewHeight
+        tableView.frame = CGRect(x: 0, y: view.frame.height,
+                                 width: view.frame.width, height: height)
+        
+        
+        view.addSubview(tableView )
     }
 }
 
@@ -140,4 +158,17 @@ extension HomeViewController: LocationInputViewDelegate {
             }
         }
     }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
+        return cell
+    }
+    
+    
 }

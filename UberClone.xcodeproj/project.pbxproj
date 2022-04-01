@@ -20,6 +20,7 @@
 		8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */; };
 		8BA1311127DD21300073E8A2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1311027DD21300073E8A2 /* UIView+.swift */; };
 		8BA1311327DD3CA80073E8A2 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1311227DD3CA80073E8A2 /* UITextField+.swift */; };
+		8BC6B8CE27F77F29009B8057 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC6B8CD27F77F29009B8057 /* LocationCell.swift */; };
 		8BCE83BC27E7D509001FC502 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83BB27E7D509001FC502 /* FirebaseAuth */; };
 		8BCE83BE27E7D509001FC502 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83BD27E7D509001FC502 /* FirebaseDatabase */; };
 		8BCE83C027E7D509001FC502 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83BF27E7D509001FC502 /* FirebaseStorage */; };
@@ -45,6 +46,7 @@
 		8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8BA1311027DD21300073E8A2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		8BA1311227DD3CA80073E8A2 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		8BC6B8CD27F77F29009B8057 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		8BCE83C627E7E018001FC502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BD81BF227E91E2C00FB9793 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 				8B31073F27DE789800756261 /* AuthButton.swift */,
 				8B6D490427EF5A5A004BFA3F /* LocationInputActivationView.swift */,
 				8B933E0427F4EB5400FE04B8 /* LocationInputView.swift */,
+				8BC6B8CD27F77F29009B8057 /* LocationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				8B31073E27DE371300756261 /* SignUpViewController.swift in Sources */,
 				8BA1311327DD3CA80073E8A2 /* UITextField+.swift in Sources */,
 				8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */,
+				8BC6B8CE27F77F29009B8057 /* LocationCell.swift in Sources */,
 				8BD81BF327E91E2C00FB9793 /* HomeViewController.swift in Sources */,
 				8BA130F527DCFB050073E8A2 /* AppDelegate.swift in Sources */,
 				8BA130F727DCFB050073E8A2 /* SceneDelegate.swift in Sources */,
