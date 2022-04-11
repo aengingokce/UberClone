@@ -17,6 +17,12 @@ class LocationInputView: UIView {
     
     weak var delegate: LocationInputViewDelegate?
     
+    var user: User? {
+        didSet {
+            titleLabel.text = user?.fullname
+        }
+    }
+    
     private let backButton: UIButton = {
        let button = UIButton()
        button.setImage(#imageLiteral(resourceName: "baseline_arrow_back_black_36dp").withRenderingMode(.alwaysOriginal), for: .normal)

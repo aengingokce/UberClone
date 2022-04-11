@@ -20,6 +20,8 @@
 		8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */; };
 		8BA1311127DD21300073E8A2 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1311027DD21300073E8A2 /* UIView+.swift */; };
 		8BA1311327DD3CA80073E8A2 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA1311227DD3CA80073E8A2 /* UITextField+.swift */; };
+		8BC1C9792804BDD00040C2A2 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1C9782804BDD00040C2A2 /* Service.swift */; };
+		8BC1C97B2804CBE00040C2A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1C97A2804CBE00040C2A2 /* User.swift */; };
 		8BC6B8CE27F77F29009B8057 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC6B8CD27F77F29009B8057 /* LocationCell.swift */; };
 		8BCE83BC27E7D509001FC502 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83BB27E7D509001FC502 /* FirebaseAuth */; };
 		8BCE83BE27E7D509001FC502 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8BCE83BD27E7D509001FC502 /* FirebaseDatabase */; };
@@ -46,6 +48,8 @@
 		8BA1310D27DCFCC40073E8A2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8BA1311027DD21300073E8A2 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		8BA1311227DD3CA80073E8A2 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		8BC1C9782804BDD00040C2A2 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		8BC1C97A2804CBE00040C2A2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8BC6B8CD27F77F29009B8057 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		8BCE83C627E7E018001FC502 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8BD81BF227E91E2C00FB9793 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		8BA1310927DCFB440073E8A2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				8BC1C9782804BDD00040C2A2 /* Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 		8BA1310C27DCFB520073E8A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8BC1C97A2804CBE00040C2A2 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,10 +253,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B6D490527EF5A5A004BFA3F /* LocationInputActivationView.swift in Sources */,
+				8BC1C9792804BDD00040C2A2 /* Service.swift in Sources */,
 				8BA1311127DD21300073E8A2 /* UIView+.swift in Sources */,
 				8B31074027DE789800756261 /* AuthButton.swift in Sources */,
 				8B31073E27DE371300756261 /* SignUpViewController.swift in Sources */,
 				8BA1311327DD3CA80073E8A2 /* UITextField+.swift in Sources */,
+				8BC1C97B2804CBE00040C2A2 /* User.swift in Sources */,
 				8BA1310E27DCFCC40073E8A2 /* LoginViewController.swift in Sources */,
 				8BC6B8CE27F77F29009B8057 /* LocationCell.swift in Sources */,
 				8BD81BF327E91E2C00FB9793 /* HomeViewController.swift in Sources */,
