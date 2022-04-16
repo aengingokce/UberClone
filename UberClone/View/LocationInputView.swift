@@ -32,7 +32,6 @@ class LocationInputView: UIView {
     
     private let titleLabel: UILabel = {
        let label = UILabel()
-       label.text = "Anonim"
        label.textColor = .darkGray
        label.font = UIFont.systemFont(ofSize: 16)
        return label
